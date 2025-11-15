@@ -1,5 +1,148 @@
-[gd_scene format=3 uid="uid://b1kdk05gsml4c"]
+[gd_scene load_steps=18 format=3 uid="uid://b1kdk05gsml4c"]
+
+[ext_resource type="Texture2D" uid="uid://b4vr4w4eaxrhu" path="res://assets/dirtbackground.png" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://b20oawkfbqt7m" path="res://scenes/tileMapTest.tscn" id="2_sugp2"]
+[ext_resource type="Texture2D" uid="uid://b46tx0ln4vlk3" path="res://assets/5.png" id="3_85g3d"]
+[ext_resource type="Texture2D" uid="uid://cnmikyxkb0cpl" path="res://assets/6.png" id="4_choun"]
+[ext_resource type="Script" uid="uid://bro6vv2iaxolj" path="res://scenes/gem1.gd" id="4_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://b8gu7rum5yvrl" path="res://assets/7.png" id="5_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://dylki8s0dvvnl" path="res://assets/8.png" id="6_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://dpswum8sjqj8s" path="res://assets/9.png" id="7_trceg"]
+[ext_resource type="Texture2D" uid="uid://dypqssu8svvqe" path="res://assets/10.png" id="8_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://b8qnu7a4nqxhj" path="res://assets/11.png" id="9_jkv2x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbj1t"]
+size = Vector2(1192.1807, 1084.5629)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muem4"]
+size = Vector2(9, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dp3eg"]
+size = Vector2(809.0117, 733.2969)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqmmt"]
+size = Vector2(1466.543, 1209.9829)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yc10j"]
+size = Vector2(11, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jscy8"]
+size = Vector2(906, 772.3535)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pm3ni"]
+size = Vector2(1061.627, 897.6626)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(192, 108)
+zoom = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(205.00002, 110)
+scale = Vector2(0.19941406, 0.19959489)
+texture = ExtResource("1_0wfyh")
+
+[node name="TileMapTest" parent="." instance=ExtResource("2_sugp2")]
+position = Vector2(33, 6)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(61.999996, 50)
+scale = Vector2(0.011645507, 0.0119863935)
+texture = ExtResource("3_85g3d")
+script = ExtResource("4_eb6dy")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Area2D"]
+position = Vector2(-515.21967, 0)
+shape = SubResource("RectangleShape2D_jbj1t")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(189.99997, 93.00001)
+scale = Vector2(0.009728998, 0.009233944)
+texture = ExtResource("4_choun")
+script = ExtResource("4_eb6dy")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D3"]
+position = Vector2(-18193.035, -11154.497)
+scale = Vector2(102.785515, 108.29609)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D3/Area2D"]
+position = Vector2(173.00002, 102.99999)
+shape = SubResource("RectangleShape2D_muem4")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(300, 157)
+scale = Vector2(0.011124675, 0.011060462)
+texture = ExtResource("5_ya4ey")
+script = ExtResource("4_eb6dy")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D4/Area2D"]
+position = Vector2(-449.451, 0)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_dp3eg")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(239, 64)
+scale = Vector2(0.0075521343, 0.008333452)
+texture = ExtResource("6_eb6dy")
+script = ExtResource("4_eb6dy")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D5/Area2D"]
+position = Vector2(-397.23975, -0.00024414063)
+scale = Vector2(0.9999998, 0.9999997)
+shape = SubResource("RectangleShape2D_gqmmt")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(142.00002, 175)
+scale = Vector2(0.011002599, 0.010416664)
+texture = ExtResource("7_trceg")
+script = ExtResource("4_eb6dy")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D6"]
+position = Vector2(-12906.042, -16032.004)
+scale = Vector2(90.88761, 96.00002)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D6/Area2D"]
+position = Vector2(136.00002, 167)
+shape = SubResource("RectangleShape2D_yc10j")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(334, 91.00001)
+scale = Vector2(0.0078124953, 0.007870363)
+texture = ExtResource("8_a8y0u")
+script = ExtResource("4_eb6dy")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D7"]
+position = Vector2(768.0005, 508.23477)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D7/Area2D"]
+position = Vector2(-1152.001, -508.23578)
+scale = Vector2(1, 0.9999998)
+shape = SubResource("RectangleShape2D_jscy8")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(107.999985, 125)
+scale = Vector2(0.008398428, 0.008912044)
+texture = ExtResource("9_jkv2x")
+script = ExtResource("4_eb6dy")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D8/Area2D"]
+position = Vector2(-357.208, 0)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_pm3ni")
+
+[connection signal="input_event" from="Sprite2D2/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Sprite2D3/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Sprite2D4/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Sprite2D5/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Sprite2D6/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Sprite2D7/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Sprite2D8/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
