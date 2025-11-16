@@ -11,3 +11,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
+
+func _on_hammer_toggle_pressed() -> void:
+	# SET CURSOR TO HAMMER
+	GLOBALS.radius = 1
+	# 
+
+
+func _on_ice_pick_toggle_pressed() -> void:
+	# SET CURSOR TO ICE PIC
+	
+	# set radius to 1
+	GLOBALS.radius = 0
+	

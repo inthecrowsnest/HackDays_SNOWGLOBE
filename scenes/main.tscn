@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b20oawkfbqt7m" path="res://scenes/tileMapTest.tscn" id="2_sugp2"]
 [ext_resource type="Texture2D" uid="uid://b46tx0ln4vlk3" path="res://assets/5.png" id="3_85g3d"]
 [ext_resource type="Texture2D" uid="uid://cnmikyxkb0cpl" path="res://assets/6.png" id="4_choun"]
-[ext_resource type="Script" uid="uid://bro6vv2iaxolj" path="res://scenes/gem1.gd" id="4_eb6dy"]
+[ext_resource type="Script" uid="uid://bro6vv2iaxolj" path="res://scripts/gem1.gd" id="4_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://b8gu7rum5yvrl" path="res://assets/7.png" id="5_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://dylki8s0dvvnl" path="res://assets/8.png" id="6_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://dpswum8sjqj8s" path="res://assets/9.png" id="7_trceg"]
@@ -35,114 +35,114 @@ size = Vector2(1061.627, 897.6626)
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(192, 108)
-zoom = Vector2(3, 3)
+offset = Vector2(181.885, 118.41)
+zoom = Vector2(2.5, 2.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(205.00002, 110)
-scale = Vector2(0.19941406, 0.19959489)
+position = Vector2(176.78125, 105.10938)
+scale = Vector2(0.18251953, 0.19239004)
 texture = ExtResource("1_0wfyh")
 
 [node name="TileMapTest" parent="." instance=ExtResource("2_sugp2")]
-position = Vector2(33, 6)
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(61.999996, 50)
-scale = Vector2(0.011645507, 0.0119863935)
+[node name="Orange" type="Sprite2D" parent="." node_paths=PackedStringArray("orange", "purple", "diamond", "topaz", "emerald", "sapphire", "ruby")]
+position = Vector2(64.08984, 71.5)
+scale = Vector2(0.009468585, 0.013888893)
 texture = ExtResource("3_85g3d")
-script = ExtResource("4_eb6dy")
+script = ExtResource("4_ya4ey")
+orange = NodePath(".")
+purple = NodePath("../Purple")
+diamond = NodePath("../Diamond")
+topaz = NodePath("../Topax")
+emerald = NodePath("../Emerald")
+sapphire = NodePath("../Sapphire")
+ruby = NodePath("../Ruby")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D2"]
+[node name="Area2D" type="Area2D" parent="Orange"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Area2D"]
-position = Vector2(-515.21967, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Orange/Area2D"]
+position = Vector2(-515.2196, 0)
 shape = SubResource("RectangleShape2D_jbj1t")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(189.99997, 93.00001)
-scale = Vector2(0.009728998, 0.009233944)
+[node name="Purple" type="Sprite2D" parent="."]
+position = Vector2(192.33008, 107.5)
+scale = Vector2(0.012156184, 0.013888883)
 texture = ExtResource("4_choun")
-script = ExtResource("4_eb6dy")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D3"]
+[node name="Area2D" type="Area2D" parent="Purple"]
 position = Vector2(-18193.035, -11154.497)
 scale = Vector2(102.785515, 108.29609)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D3/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Area2D"]
 position = Vector2(173.00002, 102.99999)
 shape = SubResource("RectangleShape2D_muem4")
 
-[node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(300, 157)
-scale = Vector2(0.011124675, 0.011060462)
+[node name="Diamond" type="Sprite2D" parent="."]
+position = Vector2(302.66016, 155.98633)
+scale = Vector2(0.0138956765, 0.01293764)
 texture = ExtResource("5_ya4ey")
-script = ExtResource("4_eb6dy")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D4"]
+[node name="Area2D" type="Area2D" parent="Diamond"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D4/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diamond/Area2D"]
 position = Vector2(-449.451, 0)
 scale = Vector2(0.99999976, 1)
 shape = SubResource("RectangleShape2D_dp3eg")
 
-[node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(239, 64)
-scale = Vector2(0.0075521343, 0.008333452)
+[node name="Topax" type="Sprite2D" parent="."]
+position = Vector2(239.87497, 63.250034)
+scale = Vector2(0.008463572, 0.009722284)
 texture = ExtResource("6_eb6dy")
-script = ExtResource("4_eb6dy")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D5"]
+[node name="Area2D" type="Area2D" parent="Topax"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D5/Area2D"]
-position = Vector2(-397.23975, -0.00024414063)
-scale = Vector2(0.9999998, 0.9999997)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Topax/Area2D"]
+position = Vector2(-397.24023, -0.00048828125)
+scale = Vector2(0.9999997, 0.9999996)
 shape = SubResource("RectangleShape2D_gqmmt")
 
-[node name="Sprite2D6" type="Sprite2D" parent="."]
-position = Vector2(142.00002, 175)
-scale = Vector2(0.011002599, 0.010416664)
+[node name="Emerald" type="Sprite2D" parent="."]
+position = Vector2(101.00001, 195.5)
+scale = Vector2(0.011458334, 0.010185188)
 texture = ExtResource("7_trceg")
-script = ExtResource("4_eb6dy")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D6"]
+[node name="Area2D" type="Area2D" parent="Emerald"]
 position = Vector2(-12906.042, -16032.004)
 scale = Vector2(90.88761, 96.00002)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D6/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Emerald/Area2D"]
 position = Vector2(136.00002, 167)
 shape = SubResource("RectangleShape2D_yc10j")
 
-[node name="Sprite2D7" type="Sprite2D" parent="."]
-position = Vector2(334, 91.00001)
-scale = Vector2(0.0078124953, 0.007870363)
+[node name="Sapphire" type="Sprite2D" parent="."]
+position = Vector2(330.75, 97.75001)
+scale = Vector2(0.009635417, 0.010648149)
 texture = ExtResource("8_a8y0u")
-script = ExtResource("4_eb6dy")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D7"]
+[node name="Area2D" type="Area2D" parent="Sapphire"]
 position = Vector2(768.0005, 508.23477)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D7/Area2D"]
-position = Vector2(-1152.001, -508.23578)
-scale = Vector2(1, 0.9999998)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sapphire/Area2D"]
+position = Vector2(-1152.0039, -508.23535)
+scale = Vector2(1, 0.9999997)
 shape = SubResource("RectangleShape2D_jscy8")
 
-[node name="Sprite2D8" type="Sprite2D" parent="."]
-position = Vector2(107.999985, 125)
-scale = Vector2(0.008398428, 0.008912044)
+[node name="Ruby" type="Sprite2D" parent="."]
+position = Vector2(128.5, 122.90625)
+scale = Vector2(0.013020834, 0.012789352)
 texture = ExtResource("9_jkv2x")
-script = ExtResource("4_eb6dy")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D8"]
+[node name="Area2D" type="Area2D" parent="Ruby"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D8/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ruby/Area2D"]
 position = Vector2(-357.208, 0)
-scale = Vector2(1.0000002, 1.0000002)
+scale = Vector2(1.0000002, 1.0000001)
 shape = SubResource("RectangleShape2D_pm3ni")
 
-[connection signal="input_event" from="Sprite2D2/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="Sprite2D3/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="Sprite2D4/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="Sprite2D5/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="Sprite2D6/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="Sprite2D7/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
-[connection signal="input_event" from="Sprite2D8/Area2D" to="Sprite2D2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Orange/Area2D" to="Orange" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Purple/Area2D" to="Orange" method="_on_area_2d_input_event_purple"]
+[connection signal="input_event" from="Diamond/Area2D" to="Orange" method="_on_area_2d_input_event_diamond"]
+[connection signal="input_event" from="Topax/Area2D" to="Orange" method="_on_area_2d_input_event_topaz"]
+[connection signal="input_event" from="Emerald/Area2D" to="Orange" method="_on_area_2d_input_event_emerald"]
+[connection signal="input_event" from="Sapphire/Area2D" to="Orange" method="_on_area_2d_input_event_sapphire"]
+[connection signal="input_event" from="Ruby/Area2D" to="Orange" method="_on_area_2d_input_event_ruby"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c1wwoa3bvis12"]
+
+[node name="ProgressBarUI" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 41.0
+grow_horizontal = 2
+fill_mode = 1
+show_percentage = false

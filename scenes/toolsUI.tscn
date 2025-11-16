@@ -15,8 +15,9 @@ size_flags_vertical = 8
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
+anchors_preset = -1
+anchor_top = 1.2
+anchor_right = -0.35
 anchor_bottom = 1.0
 offset_top = -136.0
 offset_right = 276.0
@@ -38,4 +39,5 @@ texture_normal = ExtResource("1_vfheh")
 script = ExtResource("2_gd1on")
 
 [connection signal="gui_input" from="HBoxContainer/IcePick Toggle" to="HBoxContainer/IcePick Toggle" method="_on_gui_input"]
-[connection signal="pressed" from="HBoxContainer/IcePick Toggle" to="HBoxContainer/IcePick Toggle" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/IcePick Toggle" to="HBoxContainer/Hammer Toggle" method="_on_ice_pick_toggle_pressed"]
+[connection signal="pressed" from="HBoxContainer/Hammer Toggle" to="HBoxContainer/IcePick Toggle" method="_on_hammer_toggle_pressed"]
